@@ -1,0 +1,172 @@
+body{
+    font-family: 'Source code pro', Calibri, serif;  
+    margin: 0px;
+    padding: 0px;
+    background-image: url(c3d09fdcb6_nodam_3477-1024x768-fbb64.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+}
+
+nav{
+    width: 100;
+    background-color: rgb(90, 86, 86);
+}
+
+nav > ul{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+nav li{
+    list-style-type: none;
+}
+
+nav > ul > li{
+    float: left;
+    position: relative;
+}
+
+nav > ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.sous-menu{
+    display: none;
+}
+nav input[type=checkbox]{
+     display: none;
+}
+
+nav label{
+     display: none;
+}
+
+nav a{
+     display: inline-block;
+     text-decoration: none;
+}
+
+nav > ul > li a{
+     padding: 20px 30px;
+     color: #fff;
+}
+
+nav > ul > li:hover a{
+    padding: 15px 30px 20px 30px;
+}
+
+nav li:hover .sous-menu{
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    padding: 0px;
+    z-index: 1000;
+}
+
+.sous-menu li a{
+    padding: 15px 30px;
+    font-size: 13px;
+    color: #181a25;
+    width: 270px;
+}
+
+
+.sous-menu li{
+    border-bottom: 1px solid #ccc;
+}
+.menu-acceuil:hover{
+    border-top: 5px solid #e44d26;
+    background-color: RGBa(228, 77, 38, 0.15);
+}
+
+.menu-blog:hover{
+    border-top: 5px solid #0070bb;
+    background-color: RGBa(000, 112, 192, 0.15);
+}
+
+.menu-apropos:hover{
+    border-top: 5px solid #f1dc4f;
+    background-color: RGBa(241, 211, 79, 0.15);
+}
+
+.menu-agenda:hover{
+    border-top: 5px solid rgb(30, 255, 0);
+    background-color: RGBa(220, 220, 220, 0.15);
+}
+
+.menu-contact:hover{
+    border-top: 5px solid #bbb;
+    background-color: RGBa(220, 220, 220, 0.15);
+}
+
+.menu-acceuil .sous-menu{
+    background-color: RGB(230, 100, 40);
+}
+
+.menu-blog .sous-menu{
+    background-color: RGB(000, 160, 240);
+}
+
+.menu-apropos .sous-menu{
+    background-color: RGB(250, 215, 100);
+}
+
+.menu-agenda .sous-menu{
+    background-color: rgb(50, 228, 50);
+}
+
+.sous-menu li:hover a{
+    color: #eee;  
+    font-weight: bold;
+}
+
+.menu-acceuil .sous-menu li:hover{
+    background-color: RGB(210, 77, 60);
+}
+
+.menu-blog .sous-menu li:hover{
+    background-color: RGB(000, 115, 200);
+}
+
+.menu-apropos .sous-menu li:hover{
+    background-color: RGB(200, 165, 75);
+}
+
+.menu-agenda .sous-menu li:hover{
+    background-color: rgb(117, 235, 0);
+}
+
+nav input[type=checkbox]:checked ~ ul{
+    display: block;
+
+}
+
+@media screen and (max-width: 780px){
+    .menu-mobile{
+        display: block;
+        color: #fff;
+        background-color: RGBa(218, 165, 32, 0.90);
+        text-align: center;
+        padding: 12px 0px;
+    }
+    nav ul{
+        display: none;
+    }
+    nav ul li, nav ul li a{
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li a, nav ul li:hover a{
+        padding: 10px 0px;
+    }
+    nav li:hover .sous-menu{
+        display: block;
+        position: static;
+    }
+}
+
